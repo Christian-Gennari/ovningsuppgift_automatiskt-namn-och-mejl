@@ -17,9 +17,9 @@ public class Person
             int at = input.IndexOf('@');
             if (dot > 0 && at > dot)
             {
-                FirstName = input[..dot];
-                LastName = input[(dot + 1)..at];
-                Domain = input[(at + 1)..];
+                FirstName = input[..dot]; // ".." är range operator, från början till dot-1
+                LastName = input[(dot + 1)..at]; // (dot + 1) till at-1
+                Domain = input[(at + 1)..]; // (at + 1) till slutet
             }
             else
             {
